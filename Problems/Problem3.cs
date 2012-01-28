@@ -1,13 +1,14 @@
 ﻿using ProjectEuler.Utilities;
 using System.Linq;
+using System;
 
 namespace ProjectEuler.Problems
 {
-    class Problem1 : IProblem
+    class Problem3 : IProblem
     {
         public long Run()
         {
-            return new Range(1000).Where(n => n.IsDivisiableBy(3) || n.IsDivisiableBy(5)).Sum();
+            return new Factorization(600851475143).Max();
         }
 
     }

@@ -2,6 +2,6 @@
 {
     interface IProblem
     {
-        int Run();
+        long Run();
     }
 }

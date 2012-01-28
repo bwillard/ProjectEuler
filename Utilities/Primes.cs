@@ -4,11 +4,13 @@ using System.Collections;
 
 namespace ProjectEuler.Utilities
 {
-    class Range: IEnumerable<long>
+    class Primes : IEnumerable<Int64>
     {
         private long m_max;
 
-        public Range(long max)
+        private List<long> m_primes = new List<long> { 2 };
+
+        public Primes(long max)
         {
             m_max = max;
         }
@@ -20,9 +22,13 @@ namespace ProjectEuler.Utilities
 
         public IEnumerator<long> GetEnumerator()
         {
-            for (long i = 1; i < m_max; i++)
+            for (long i = 3; i < m_max; i += 2)
             {
-                yield return i;
+                if (m_primes.TrueForAll(p => !i.IsDivisiableBy(p)))
+                {
+                    m_primes.Add(i);
+                    yield return i;
+                }
             }
         }
     }

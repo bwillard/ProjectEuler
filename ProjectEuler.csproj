@@ -44,10 +44,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IProblem.cs" />
+    <Compile Include="Problems\Problem3.cs" />
+    <Compile Include="Problems\Problem2.cs" />
     <Compile Include="Problems\Problem1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utilities\ExtensionsInt.cs" />
+    <Compile Include="Utilities\Factorization.cs" />
+    <Compile Include="Utilities\Fibonacci.cs" />
+    <Compile Include="Utilities\NumericExtensions.cs" />
+    <Compile Include="Utilities\Primes.cs" />
     <Compile Include="Utilities\Range.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
