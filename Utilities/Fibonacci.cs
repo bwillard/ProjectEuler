@@ -4,13 +4,13 @@ using System.Collections;
 
 namespace ProjectEuler.Utilities
 {
-    class Fibonacci : IEnumerable<int>
+    class Fibonacci : IEnumerable<long>
     {
-        private int m_max;
-        private int m_last1=1;
-        private int m_last2=1;
+        private long m_max;
+        private long m_last1 = 1;
+        private long m_last2 = 1;
 
-        public Fibonacci(int max)
+        public Fibonacci(long max)
         {
             m_max = max;
         }
@@ -20,12 +20,12 @@ namespace ProjectEuler.Utilities
             return this.GetEnumerator();
         }
 
-        public IEnumerator<int> GetEnumerator()
+        public IEnumerator<long> GetEnumerator()
         {
             yield return 0;
             yield return 1;
 
-            int next = 1;
+            long next = 1;
             while (next<m_max)
             {
                 yield return next;
