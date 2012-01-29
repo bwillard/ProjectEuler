@@ -8,6 +8,10 @@ namespace ProjectEuler.Utilities
     {
         private long m_max;
 
+        /// <summary>
+        /// returns a set of number from 1 to max (exclusive)
+        /// </summary>
+        /// <param name="max">max s exclusive, e.g. it will no be returned</param>
         public Range(long max)
         {
             m_max = max;
