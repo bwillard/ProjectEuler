@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace ProjectEuler.Utilities
 {
     static class NumericExtensions
     {
         public static bool IsDivisiableBy(this long value, long divisor)
         {
-            Int64 n = value / divisor;
+            long n = value / divisor;
             return n * divisor == value;
         }
 
@@ -22,6 +24,17 @@ namespace ProjectEuler.Utilities
             }
 
             return true;
+        }
+
+        public static long Product(this IEnumerable<int> values)
+        {
+            long product = 1;
+            foreach (int n in values)
+            {
+                product *= n;
+            }
+
+            return product;
         }
     }
 }
