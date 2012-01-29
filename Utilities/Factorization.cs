@@ -20,7 +20,18 @@ namespace ProjectEuler.Utilities
 
         public IEnumerator<Int64> GetEnumerator()
         {
-            Int64 sqrt = (Int64)Math.Sqrt(m_number);
+            long original = m_number;
+            if (m_number <= 1)
+            {
+                yield break;
+            }
+            else if (m_number <= 3)
+            {
+                yield return m_number;
+                yield break;
+            }
+
+            Int64 sqrt = (Int64)m_number/2+1;
 
             foreach(Int64 prime in new Primes(sqrt))
             {
@@ -36,7 +47,15 @@ namespace ProjectEuler.Utilities
                 }
             }
 
-            throw new Exception("Shouldn't be here, we ran out of primes and are left with: " + m_number);
+            if(m_number == original)
+            {
+                //it was prime
+                yield return m_number;
+            }
+            else
+            {
+                throw new Exception("Shouldn't be here, we ran out of primes and are left with: " + m_number + " left, starting number: " + original);
+            }
         }
     }
 }

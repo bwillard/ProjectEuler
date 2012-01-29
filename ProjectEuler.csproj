@@ -34,6 +34,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,14 +48,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IProblem.cs" />
+    <Compile Include="Problems\Problem5.cs" />
     <Compile Include="Problems\Problem4.cs" />
     <Compile Include="Problems\Problem3.cs" />
     <Compile Include="Problems\Problem2.cs" />
     <Compile Include="Problems\Problem1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\Utilities\FactorizationTest.cs" />
+    <Compile Include="Tests\Utilities\LCMTest.cs" />
+    <Compile Include="Tests\Problem5Test.cs" />
+    <Compile Include="Tests\Problem4Test.cs" />
+    <Compile Include="Tests\Problem3Test.cs" />
+    <Compile Include="Tests\Problem2Test.cs" />
+    <Compile Include="Tests\Problem1Test.cs" />
     <Compile Include="Utilities\Factorization.cs" />
     <Compile Include="Utilities\Fibonacci.cs" />
+    <Compile Include="Utilities\LCM.cs" />
     <Compile Include="Utilities\NumericExtensions.cs" />
     <Compile Include="Utilities\Primes.cs" />
     <Compile Include="Utilities\Range.cs" />

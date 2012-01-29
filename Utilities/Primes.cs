@@ -22,7 +22,14 @@ namespace ProjectEuler.Utilities
 
         public IEnumerator<long> GetEnumerator()
         {
-            for (long i = 3; i < m_max; i += 2)
+            if (m_max < 2)
+            {
+                yield break;
+            }
+
+            yield return 2;
+
+            for (long i = 3; i <= m_max; i += 2)
             {
                 if (m_primes.TrueForAll(p => !i.IsDivisiableBy(p)))
                 {
