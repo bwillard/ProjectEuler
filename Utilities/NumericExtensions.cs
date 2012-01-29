@@ -7,8 +7,7 @@ namespace ProjectEuler.Utilities
     {
         public static bool IsDivisiableBy(this long value, long divisor)
         {
-            long n = value / divisor;
-            return n * divisor == value;
+            return 0 == value % divisor;
         }
 
         public static bool IsPalindrome(this long number)

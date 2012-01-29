@@ -31,7 +31,24 @@ namespace ProjectEuler.Utilities
 
             for (long i = 3; i <= m_max; i += 2)
             {
-                if (m_primes.TrueForAll(p => !i.IsDivisiableBy(p)))
+                double sqrt = Math.Sqrt(i);
+                bool isPrime = true;
+                foreach (long prime in m_primes)
+                {
+                    if (prime > sqrt)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        if(i.IsDivisiableBy(prime))
+                        {
+                            isPrime = false;
+                            break;
+                        }
+                    }
+                }
+                if (isPrime)
                 {
                     m_primes.Add(i);
                     yield return i;
@@ -40,3 +57,4 @@ namespace ProjectEuler.Utilities
         }
     }
 }
+    

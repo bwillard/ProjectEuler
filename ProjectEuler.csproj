@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{D20E9EAC-9990-4502-B54B-3C0F35872AA0}</ProjectGuid>
     <OutputType>Exe</OutputType>
@@ -42,12 +42,12 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IProblem.cs" />
+    <Compile Include="Problems\Problem10.cs" />
     <Compile Include="Problems\Problem9.cs" />
     <Compile Include="Problems\Problem8.cs" />
     <Compile Include="Problems\Problem7.cs" />
@@ -59,10 +59,12 @@
     <Compile Include="Problems\Problem1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\Problem10Test.cs" />
     <Compile Include="Tests\Problem9Test.cs" />
     <Compile Include="Tests\Problem8Test.cs" />
     <Compile Include="Tests\Problem7Test.cs" />
     <Compile Include="Tests\Problem6Test.cs" />
+    <Compile Include="Tests\Utilities\PrimesTest.cs" />
     <Compile Include="Tests\Utilities\FactorizationTest.cs" />
     <Compile Include="Tests\Utilities\LCMTest.cs" />
     <Compile Include="Tests\Problem5Test.cs" />
